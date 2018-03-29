@@ -10,11 +10,9 @@
 
 এই ডাটা থেকে আমরা বিশাল একটা ধারণা করতে পারি সরকারি জরিপের আগেই। অনেক সময় ভুল অথবা সময়মতো জরিপ না হলে মানুষের ভেতরের খবর জানবে কে? কে আসলে কষ্টে আছে? কে একদম আত্মহত্যার মুখোমুখি পর্যায়ে আছে? ডাটা মিথ্যা বলে না। ফসল ধরে ধরে বলা যাচ্ছে কোথায় কি কি হচ্ছে? আসলেই তাই। ফসলের রং ধরে বলে দেয়া যায় আর কতোদিন পরে ফসল উঠবে? কোথায় মঙ্গা হবে সেটা বের করা যাবে আগে থেকে। আবহাওয়া, মাটির অবস্থা, ফসলের দামও প্রেডিক্ট করা যাচ্ছে এই মডেলে। আগামী বছর আমাদের চাল আমদানী করতে হবে নাকি সেটাও পাওয়া যাবে এখানে। ফাও, একটা ইউএন সংস্থা এই কাজ করছে অনেক বছর ধরে। কোথায় খাদ্য সাহায্য পাঠাতে হবে সেটার হিসেব পায় কিন্তু আগে থেকে।
 
-[^1]
-
 [^1]: কিছু ধারণা পাওয়া যাবে এখানে [http://sustain.stanford.edu/crop-yield-analysis/](http://sustain.stanford.edu/crop-yield-analysis/)
 
 [^2]: আরো কিছু - [https://blog.farmguide.in/farmguide-information-services-to-farmers-agriculture-india-94c8409b8a1d](https://blog.farmguide.in/farmguide-information-services-to-farmers-agriculture-india-94c8409b8a1d)
 
-[^3]: এবং https://www.satellitetoday.com/innovation/2017/08/22/can-satellites-solve-farmer-suicide-crisis-india/
+[^3]: এবং [https://www.satellitetoday.com/innovation/2017/08/22/can-satellites-solve-farmer-suicide-crisis-india/](https://www.satellitetoday.com/innovation/2017/08/22/can-satellites-solve-farmer-suicide-crisis-india/)
 
