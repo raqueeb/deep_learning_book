@@ -9,5 +9,6 @@
   * [ডীপফেইক](why_deep_learning/deepfake.md)
   * [যদি নায়ক না থাকে?](why_deep_learning/actor_missing.md)
   * ['সেন্টিমেন্ট অ্যানালাইসিস' আর শিক্ষার হারের যোগসূত্র](why_deep_learning/sentiment_analysis.md)
+  * [কনটেন্ট মডারেশন - অসুস্থতার যোগসূত্র ](why_deep_learning/content_moderator_inapp-content.md)
 * [First Chapter](chapter1.md)
 
