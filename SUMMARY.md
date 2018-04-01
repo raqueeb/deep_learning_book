@@ -11,5 +11,5 @@
   * ['সেন্টিমেন্ট অ্যানালাইসিস' আর শিক্ষার হারের যোগসূত্র](why_deep_learning/sentiment_analysis.md)
   * [কনটেন্ট মডারেশন - অসুস্থতার যোগসূত্র ](why_deep_learning/content_moderator_inapp-content.md)
 * [হাতের লেখা চিনতে মেশিন লার্নিং](chapter1.md)
-  * [সাইকিট-লার্ন ডাটাসেট ](chapter1/mnist.md)
+  * [সাইকিট-লার্ন ডাটাসেট ](digit-recognition/mnist.md)
 
