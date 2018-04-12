@@ -10,6 +10,7 @@
   * [যদি নায়ক না থাকে?](why_deep_learning/actor_missing.md)
   * ['সেন্টিমেন্ট অ্যানালাইসিস' আর শিক্ষার হারের যোগসূত্র](why_deep_learning/sentiment_analysis.md)
   * [কনটেন্ট মডারেশন - অসুস্থতার যোগসূত্র ](why_deep_learning/content_moderator_inapp-content.md)
+  * [জাহাজ না আইসবার্গ?](why_deep_learning/iceburg-ship-classifier.md)
 * [হাতের লেখা চিনতে মেশিন লার্নিং](chapter1.md)
   * [সাইকিট-লার্ন ডাটাসেট ](digit-recognition/mnist.md)
 
