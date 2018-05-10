@@ -14,7 +14,7 @@
 
 &lt;audio controls&gt;
 
-  &lt;source src="[http://www.gstatic.com/b-g/DMS03IIQXU3TY2FD6DLPLOMBBBJ2CH188143148.mp3](https://legacy.gitbook.com/book/raqueeb/deep-learning/edit#)" type="audio/mpeg"&gt;
+&lt;source src="[http://www.gstatic.com/b-g/DMS03IIQXU3TY2FD6DLPLOMBBBJ2CH188143148.mp3](https://legacy.gitbook.com/book/raqueeb/deep-learning/edit#)" type="audio/mpeg"&gt;
 
 &lt;/audio&gt;
 
