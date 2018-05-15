@@ -12,6 +12,7 @@
   * [কনটেন্ট মডারেশন - অসুস্থতার যোগসূত্র ](why_deep_learning/content_moderator_inapp-content.md)
   * [জাহাজ না আইসবার্গ?](why_deep_learning/iceburg-ship-classifier.md)
   * [গুগল ডুপ্লেক্স](why_deep_learning/google-duplex.md)
+  * [টার্গেটের গল্প](why_deep_learning/target.md)
 * [হাতের লেখা চিনতে মেশিন লার্নিং](chapter1.md)
   * [সাইকিট-লার্ন ডাটাসেট ](digit-recognition/mnist.md)
 
