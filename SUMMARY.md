@@ -1,10 +1,10 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [টেন্সর ফ্লো এবং ডিপ লার্নিং](README.md)
 
 ## শুরুর ঘটনা <a id="start-page"></a>
 
-* [আরেকটা বই কেন?](start-page/readme.md)
+* [আরেকটা বই কেন?](start-page/why-another-book.md)
 * [কেন শিখবেন মেশিন লার্নিং?](start-page/why-ml.md)
 * [কেন ডীপ লার্নিং?](start-page/why_deep_learning/README.md)
   * [স্পীচ রিকগনিশন](start-page/why_deep_learning/speech_recognition.md)
