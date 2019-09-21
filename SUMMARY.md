@@ -7,6 +7,7 @@
 * [আরেকটা বই কেন?](start-page/why-another-book.md)
 * [এতো দেরি হলো কেন?](start-page/why-late.md)
 * [কেন শিখবেন মেশিন লার্নিং?](start-page/why-ml.md)
+* [কিছুই জানিনা, শুরু করবো কোথা থেকে?](start-page/how-to-start.md)
 * [কেন ডীপ লার্নিং?](start-page/why_deep_learning/README.md)
   * [স্পীচ রিকগনিশন](start-page/why_deep_learning/speech_recognition.md)
   * [কৃষক আত্মহত্যার যোগসূত্র](start-page/why_deep_learning/crop_suicide.md)
