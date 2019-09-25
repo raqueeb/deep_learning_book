@@ -20,6 +20,7 @@
   * [টার্গেটের গল্প](start-page/why_deep_learning/target.md)
 * [ঝিঁঝিঁপোকার থার্মোমিটার](start-page/undefined.md)
 * [প্রথম নিউরাল নেটওয়ার্ক মডেল](start-page/first-model.md)
+* [নিউরাল নেটওয়ার্কের কনসেপ্ট এবং কম্পোনেন্ট](start-page/network-concept.md)
 * [হাতের লেখা চিনতে মেশিন লার্নিং](start-page/chapter1/README.md)
   * [সাইকিট-লার্ন ডাটাসেট](start-page/chapter1/mnist.md)
 
