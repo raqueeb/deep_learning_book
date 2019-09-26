@@ -1,6 +1,6 @@
 # Table of contents
 
-* [টেন্সর ফ্লো এবং ডিপ লার্নিং](README.md)
+* [হাতেকলমে পাইথন ডিপ লার্নিং](README.md)
 
 ## শুরুর ঘটনা <a id="start-page"></a>
 

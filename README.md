@@ -1,8 +1,12 @@
 ---
-description: ড্রাফট অবস্থায় আছে
+description: সাইকিট-লার্ন থেকে টেন্সর-ফ্লো ২.০
 ---
 
-# টেন্সর ফ্লো এবং ডিপ লার্নিং
+# হাতেকলমে পাইথন ডিপ লার্নিং
+
+{% hint style="info" %}
+বইটা ড্রাফট অবস্থায় আছে। 
+{% endhint %}
 
 > There is no reason and no way that a human mind can keep up with an artificial intelligence machine by 2035.
 >
