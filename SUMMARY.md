@@ -21,7 +21,8 @@
 * [ঝিঁঝিঁপোকার থার্মোমিটার](start-page/undefined.md)
 * [প্রথম নিউরাল নেটওয়ার্ক মডেল](start-page/first-model.md)
 * [নিউরাল নেটওয়ার্কের কনসেপ্ট এবং রিপ্রেজেন্টেশন লার্নিং](start-page/network-concept.md)
-* [নিউরাল নেটওয়ার্কের কনসেপ্ট এবং কম্পোনেন্ট](start-page/component.md)
+* [নিউরাল নেটওয়ার্কের নিউরাল, ওয়েট, বায়াস, অ্যাক্টিভেশন ফাংশন](start-page/component.md)
+* [ডিপ নিউরাল নেটওয়ার্কের লেয়ারিং কনসেপ্ট](start-page/concept.md)
 * [হাতের লেখা চিনতে মেশিন লার্নিং](start-page/chapter1/README.md)
   * [সাইকিট-লার্ন ডাটাসেট](start-page/chapter1/mnist.md)
 
