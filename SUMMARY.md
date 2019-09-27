@@ -4,7 +4,7 @@
 
 ## শুরুর ঘটনা <a id="start-page"></a>
 
-* [আরেকটা বই কেন?](start-page/why-another-book.md)
+* [এই বইটা থেকে কি আশা করছি?](start-page/why-another-book.md)
 * [‘ডিপ লার্নিং’ কি হাইপ? কেন এতো দেরি হলো?](start-page/why-late.md)
 * [কেন শিখবেন মেশিন লার্নিং?](start-page/why-ml.md)
 * [কিছুই জানিনা, শুরু করবো কোথা থেকে?](start-page/how-to-start.md)
