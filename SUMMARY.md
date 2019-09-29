@@ -18,7 +18,7 @@
   * [জাহাজ না আইসবার্গ?](start-page/why_deep_learning/iceburg-ship-classifier.md)
   * [গুগল ডুপ্লেক্স](start-page/why_deep_learning/google-duplex.md)
   * [টার্গেটের গল্প](start-page/why_deep_learning/target.md)
-* [ঝিঁঝিঁপোকার থার্মোমিটার](start-page/undefined.md)
+* [ঝিঁঝিঁপোকার থার্মোমিটার](start-page/cricket-therm.md)
 * [প্রথম নিউরাল নেটওয়ার্ক মডেল](start-page/first-model.md)
 * [নিউরাল নেটওয়ার্কের কনসেপ্ট এবং রিপ্রেজেন্টেশন লার্নিং](start-page/network-concept.md)
 * [নিউরাল নেটওয়ার্কের নিউরাল, ওয়েট, বায়াস, অ্যাক্টিভেশন ফাংশন](start-page/component.md)
