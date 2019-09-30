@@ -3,7 +3,7 @@
 ### ঝিঁঝিঁ পোকার থার্মোমিটার
 
 {% hint style="info" %}
-প্রাকটিস করুন: [https://github.com/raqueeb/TensorFlow2/blob/master/cricket-therm.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/cricket-therm.ipynb)
+নিজে নিজে প্র্যাকটিস করুন: [https://github.com/raqueeb/TensorFlow2/blob/master/cricket-therm.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/cricket-therm.ipynb)
 
 কোলাব লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/cricket-therm.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/cricket-therm.ipynb)
 {% endhint %}
