@@ -3,7 +3,9 @@
 ## লাইফস্টাইল প্রোডাক্টের ক্লাসিফিকেশন
 
 {% hint style="info" %}
-যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। গিটহাব: [https://github.com/raqueeb/deep\_learning\_book/blob/master/start-page/mnist-fashion.md](https://github.com/raqueeb/deep_learning_book/blob/master/start-page/mnist-fashion.md) এবং গুগল কোলাব [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/classification\_book.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/classification_book.ipynb) 
+আমরা বই পড়ছি, নোটবুক কেন পড়বো?
+
+যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। গিটহাব লিংক: [https://github.com/raqueeb/TensorFlow2/blob/master/classification\_book.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/classification_book.ipynb) এবং গুগল কোলাব  লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/classification\_book.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/classification_book.ipynb) 
 {% endhint %}
 
 ### ফ্যাশন MNIST ডেটাসেট
