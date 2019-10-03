@@ -20,10 +20,12 @@
   * [গুগল ডুপ্লেক্স](start-page/why_deep_learning/google-duplex.md)
   * [টার্গেটের গল্প](start-page/why_deep_learning/target.md)
 * [ঝিঁঝিঁপোকার থার্মোমিটার](start-page/cricket-therm.md)
-* [প্রথম নিউরাল নেটওয়ার্ক মডেল](start-page/first-model.md)
+* [ফ্যাশন MNIST ডেটাসেটের ক্লাসিফিকেশন](start-page/mnist-fashion.md)
+* [রিগ্রেশন এবং ক্লাসিফিকেশন](start-page/what_we_learnt.md)
 * [নিউরাল নেটওয়ার্কের কনসেপ্ট এবং রিপ্রেজেন্টেশন লার্নিং](start-page/network-concept.md)
 * [নিউরাল নেটওয়ার্কের নিউরাল, ওয়েট, বায়াস, অ্যাক্টিভেশন ফাংশন](start-page/component.md)
 * [ডিপ নিউরাল নেটওয়ার্কের লেয়ারিং কনসেপ্ট](start-page/concept.md)
+* [কনভল্যুশনাল নিউরাল নেটওয়ার্ক](start-page/cnn.md)
 * [হাতের লেখা চিনতে মেশিন লার্নিং](start-page/chapter1/README.md)
   * [সাইকিট-লার্ন ডাটাসেট](start-page/chapter1/mnist.md)
 
