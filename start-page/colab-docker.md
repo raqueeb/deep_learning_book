@@ -32,3 +32,28 @@
 
 ![](../.gitbook/assets/jupy%20%281%29.PNG)
 
+৮. যদি কোন লাইব্রেরি বা দরকারি পাইথন ডিপেন্ডেন্সির আলাদা দরকার হয়, তাহলে সেটা যোগ করে নেয়া যায় সহজে। এটা তো একটা লিনাক্স সিস্টেম, তাহলে ঢুকে যাই ভেতরে। 
+
+```text
+docker run -it tensorflow/tensorflow:2.0.0-py3-jupyter /bin/bash
+# এরপর উদাহরণ হিসেবে পান্ডাজ 
+pip install pandas
+# এরপর শেল থেকে বের হয়ে যেতে হবে
+exit
+```
+
+এখন কন্টেইনারের ইমেজে কমিট করতে হবে। খুঁজে বের করি কন্টেইনার আইডি, নাম। 
+
+```text
+PS C:\Users\Test> docker ps
+CONTAINER ID        IMAGE                                     COMMAND             CREATED             STATUS              PORTS               NAMES
+bc4389d9a422        tensorflow/tensorflow:2.0.0-py3-jupyter   "/bin/bash"         8 minutes ago       Up 8 minutes        8888/tcp            beautiful_shtern
+```
+
+কমিট করছি। 
+
+```text
+PS C:\Users\Test> docker commit bc4389d9a422 tensorflow/tensorflow:2.0.0-py3-jupyter
+sha256:c4bfaac97c7b0a89c345e601c6bf5a2f0e043278b34a38f907887473c84d7d29
+```
+
