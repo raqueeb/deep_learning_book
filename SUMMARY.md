@@ -8,6 +8,7 @@
 * [‘ডিপ লার্নিং’ কি হাইপ? কেন এতো দেরি হলো?](start-page/why-late.md)
 * [কৃতজ্ঞতা](start-page/courtesy.md)
 * [কেন শিখবেন মেশিন লার্নিং?](start-page/why-ml.md)
+* [গুগল কোলাব/জুপিটার টেন্সর-ফ্লো ২.০ ডকার](start-page/colab-docker.md)
 * [কিছুই জানিনা, শুরু করবো কোথা থেকে?](start-page/how-to-start.md)
 * [কেন ডীপ লার্নিং?](start-page/why_deep_learning/README.md)
   * [স্পীচ রিকগনিশন](start-page/why_deep_learning/speech_recognition.md)
