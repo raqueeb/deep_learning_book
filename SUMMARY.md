@@ -24,6 +24,7 @@
 * [ফ্যাশন MNIST ডেটাসেটের ক্লাসিফিকেশন](start-page/mnist-fashion.md)
 * [রিগ্রেশন এবং ক্লাসিফিকেশন](start-page/what_we_learnt.md)
 * [ডিপ লার্নিং কেন? নন-লিনিয়ার সমস্যা, ফিচার ক্রস](start-page/feature_crosses.md)
+* [ডিপ লার্নিং দিয়ে ডিসিশন বাউন্ডারি, চাঁদ আকারের ডাটাসেট](start-page/deep_learning_decision_boundary.md)
 * [নিউরাল নেটওয়ার্কের কনসেপ্ট এবং রিপ্রেজেন্টেশন লার্নিং](start-page/network-concept.md)
 * [নিউরাল নেটওয়ার্কের নিউরাল, ওয়েট, বায়াস, অ্যাক্টিভেশন ফাংশন](start-page/component.md)
 * [ডিপ নিউরাল নেটওয়ার্কের লেয়ারিং কনসেপ্ট](start-page/concept.md)
