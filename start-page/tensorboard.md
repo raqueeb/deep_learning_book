@@ -5,7 +5,7 @@
 
 যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। গিটহাব লিংক: [https://github.com/raqueeb/TensorFlow2/blob/master/cnn\_tensorboard.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/cnn_tensorboard.ipynb) অথবা \(যদি রেন্ডার না হয়\) [https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/cnn\_tensorboard.ipynb](https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/cnn_tensorboard.ipynb)
 
-এবং গুগল কোলাব  লিংক: https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/[cnn\_tensorboard.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/cnn_tensorboard.ipynb)
+এবং গুগল কোলাব  লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/cnn\_tensorboard.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/cnn_tensorboard.ipynb)
 {% endhint %}
 
 
