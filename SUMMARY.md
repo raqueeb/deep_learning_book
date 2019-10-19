@@ -33,6 +33,6 @@
 * [সিএনএন, সিফার ডেটাসেট, টেন্সরবোর্ড/কেরাস কলব্যাক দিয়ে মডেল ট্র্যাকিং](start-page/tensorboard.md)
 * [কেরাস ‘প্রি-ট্রেইনড’ মডেল এবং তার ব্যবহার](start-page/tf_keras_pretraind.md)
 * [‘কনভলিউশনাল নিউরাল নেটওয়ার্ক’ এবং গ্লোবাল অ্যাভারেজ পুলিং](start-page/gap.md)
-* [হাতের লেখা চিনতে মেশিন লার্নিং](start-page/chapter1/README.md)
+* [বাংলায় সেন্টিমেন্ট অ্যানালাইসিস](start-page/chapter1/README.md)
   * [সাইকিট-লার্ন ডাটাসেট](start-page/chapter1/mnist.md)
 
