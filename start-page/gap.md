@@ -7,9 +7,9 @@
 
 যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। গিটহাব লিংক: 
 
-নিজে নিজে প্র্যাকটিস করুন: [https://github.com/raqueeb/TensorFlow2/blob/master/GAP\_cnn\_tf2.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/GAP_cnn_tf2.ipynb) অথবা [https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/GAP\_cnn\_tf2.ipynb](https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/GAP_cnn_tf2.ipynb)
+নিজে নিজে প্র্যাকটিস করুন: [https://github.com/raqueeb/TensorFlow2/blob/master/GAP\_cnn\_tf3.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/GAP_cnn_tf2.ipynb) অথবা [https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/GAP\_cnn\_tf3.ipynb](https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/GAP_cnn_tf2.ipynb)
 
-কোলাব লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/GAP\_cnn\_tf2.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/GAP_cnn_tf2.ipynb)
+কোলাব লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/GAP\_cnn\_tf3.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/GAP_cnn_tf2.ipynb)
 {% endhint %}
 
 ## ‘কনভলিউশনাল নিউরাল নেটওয়ার্ক’ এবং গ্লোবাল অ্যাভারেজ পুলিং
