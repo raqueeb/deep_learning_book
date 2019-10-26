@@ -1,5 +1,9 @@
 # কেন শিখবেন মেশিন লার্নিং?
 
+> To know, is to know that you know nothing. That is the meaning of true knowledge.
+>
+> -- Socrates
+
 {% hint style="info" %}
 আমি আসলে 'ডিপ লার্নিং'কে শুরুতে আলাদা করতে চাইনা। সবকিছুই কিন্তু মেশিন লার্নিং। 'ডিপ লার্নিং' আসলে মেশিন লার্নিং এর সাব-সেট। আমি শুধুমাত্র ডিপ লার্নিং বলার ঘোর বিরোধী, কারণ বেসিক মেশিন লার্নিং না শিখে এই বই ধরা মানা। শুরুতেই [https://raqueeb.gitbook.io/scikit-learn/](https://raqueeb.gitbook.io/scikit-learn/) অথবা এর প্রিন্ট এডিশন অথবা [https://developers.google.com/machine-learning/crash-course/](https://developers.google.com/machine-learning/crash-course/)
 
