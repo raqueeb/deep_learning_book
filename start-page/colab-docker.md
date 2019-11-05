@@ -57,5 +57,27 @@ PS C:\Users\Test> docker commit bc4389d9a422 tensorflow/tensorflow:2.0.0-py3-jup
 sha256:c4bfaac97c7b0a89c345e601c6bf5a2f0e043278b34a38f907887473c84d7d29
 ```
 
-তবে এইসব গল্প থেকে ডকারফাইল ব্যবহার করা অনেক কাজের। আমি সেটাই করি। ডকার আসলে ইমেজ তৈরি করে ডকারফাইল \( `Dockerfile` \) বলে একটা ফাইল থেকে। একটা বেজ মডেল থেকে আরো দরকারি লাইব্রেরি যোগ করা যায় এই ডকারে।  
+#### ডকারফাইল দিকে চালানো 
+
+তবে এইসব গল্প থেকে "ডকারফাইল" ব্যবহার করা অনেক কাজের। আমি সেটাই করি। ডকার আসলে ইমেজ তৈরি করে ডকারফাইল \( `Dockerfile` \) বলে একটা ফাইল থেকে। একটা বেজ মডেল থেকে আরো দরকারি লাইব্রেরি যোগ করা যায় এই ডকারে। শুরুতে প্যারেন্ট ইমেজ। যেটা হবে "tensorflow/tensorflow:2.0.0-py3-jupyter", যার উপর ভিত্তি করে পুরো জিনিস চলবে। এটা শুরু হয় FROM ডিরেক্টিভ থেকে। সব ভেঙ্গে ভেঙ্গে লিখলাম।
+
+```text
+FROM tensorflow/tensorflow:2.0.0-py3-jupyter
+
+RUN apt-get update && pip3 install pandas
+RUN pip3 install python-sklearn
+RUN apt-get update && pip install tensorflow-datasets
+# RUN pip install -U scikit-learn
+
+# clean up pip cache
+RUN rm -rf /root/.cache/pip/*
+```
+
+চালু করুন পাওয়ার-শেল, উইন্ডোজে। লিখুন;
+
+```text
+docker run -it -p 8888:8888 -v "c:/users/test/google drive:/tf" --rm --name tensorflow2 tensorflow/tensorflow:2.0.0-py3-jupyter-pandas-sklearn-tf-datasets
+```
+
+ 
 
