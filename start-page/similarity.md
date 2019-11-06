@@ -3,7 +3,7 @@
 {% hint style="info" %}
 আমরা বই পড়ছি, নোটবুক কেন পড়বো?
 
-যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। নোটবুক সবসময় আপডেটেড থাকে। গিটহাব লিংক: https://github.com/raqueeb/TensorFlow2/blob/master/similarity.ipynb অথবা https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/similarity.ipynb এবং গুগল কোলাব  লিংক: https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/similarity.ipynb
+যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। নোটবুক সবসময় আপডেটেড থাকে। গিটহাব লিংক: [https://github.com/raqueeb/TensorFlow2/blob/master/similarity.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/similarity.ipynb%20) অথবা [https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/similarity.ipynb ](https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/similarity.ipynb)এবং গুগল কোলাব  লিংক: https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/similarity.ipynb
 {% endhint %}
 
 ## শব্দের সিমিলারিটি, কাছাকাছি অর্থ, লাইকলিহুড - সঙ্গে ফাস্টটেক্সট এবং ওয়ার্ড২ভেক
