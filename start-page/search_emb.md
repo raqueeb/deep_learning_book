@@ -18,3 +18,7 @@
 
 ![&quot;&#x989;&#x9DC;&#x9C7;&quot;  &#x9B6;&#x9AC;&#x9CD;&#x9A6;&#x99F;&#x9BE;&#x995;&#x9C7; &#x9AA;&#x9CD;&#x9B0;&#x9C7;&#x9A1;&#x9BF;&#x995;&#x9CD;&#x99F; &#x995;&#x9B0;&#x9C7;&#x99B;&#x9C7; &#x995;&#x9CD;&#x9B0;&#x9B8; &#x98F;&#x9A8;&#x99F;&#x9CD;&#x9B0;&#x9AA;&#x9BF; &#x9A6;&#x9BF;&#x9DF;&#x9C7;  ](../.gitbook/assets/search5.png)
 
+{% hint style="info" %}
+পুরো ভিডিওটা দেখতে চাইলে বার্কলি স্কুল অফ ইনফরমেশনের ভিডিওটা দেখতে পারেন। গুগলের ড্যান গিলিকের ভিডিও। লিংক https://youtu.be/JGHVJXP9NHw
+{% endhint %}
+
