@@ -105,11 +105,11 @@ tensorflow/tensorflow   2.0.0-py3-jupyter-pandas-sklearn-tf-datasets   15bde597b
 tensorflow/tensorflow   2.0.0-py3-jupyter                              c652a4fc8a4f        5 weeks ago         1.22GB
 ```
 
-আবার চালু করুন পাওয়ার-শেল, উইন্ডোজে। আমাদের একটা ফোল্ডার এক্সেস করতে শেয়ার করেছি। লিখুন;
+আবার চালু করুন পাওয়ার-শেল, উইন্ডোজে। যেহেতু ডকার একটা কন্টেইনার, উইন্ডোজের ফোল্ডার এক্সেস সম্ভব না শুরুতে। আমাদের উইন্ডোজের একটা ফোল্ডার এক্সেস করতে শেয়ার করেছি। লিখুন;
 
 ```text
 docker run -it -p 8888:8888 -v "c:/users/test/google drive:/tf" --rm --name tensorflow2 tensorflow/tensorflow:2.0.0-py3-jupyter-pandas-sklearn-tf-datasets
 ```
 
- 
+ যেহেতু আমাদের ইন্টারনেট লাগবে কর্পাস/ডেটা ডাউনলোড করতে, ডকারের কন্টেইনারে প্রক্সি চালু করতে হবে। 
 
