@@ -57,9 +57,21 @@ PS C:\Users\Test> docker commit bc4389d9a422 tensorflow/tensorflow:2.0.0-py3-jup
 sha256:c4bfaac97c7b0a89c345e601c6bf5a2f0e043278b34a38f907887473c84d7d29
 ```
 
-#### ডকারফাইল দিকে চালানো 
+#### ডকারফাইল দিকে চালানো \(রিকমেন্ডেড\)
 
-তবে এইসব গল্প থেকে "ডকারফাইল" ব্যবহার করা অনেক কাজের। আমি সেটাই করি। ডকার আসলে ইমেজ তৈরি করে ডকারফাইল \( `Dockerfile` \) বলে একটা ফাইল থেকে। একটা বেজ মডেল থেকে আরো দরকারি লাইব্রেরি যোগ করা যায় এই ডকারে। শুরুতে প্যারেন্ট ইমেজ। যেটা হবে "tensorflow/tensorflow:2.0.0-py3-jupyter", যার উপর ভিত্তি করে পুরো জিনিস চলবে। এটা শুরু হয় FROM ডিরেক্টিভ থেকে। সব ভেঙ্গে ভেঙ্গে লিখলাম।
+তবে এইসব গল্প থেকে "ডকারফাইল" ব্যবহার করা অনেক কাজের। আমি সেটাই করি। ডকার আসলে ইমেজ তৈরি করে ডকারফাইল \( `Dockerfile` \) বলে একটা ফাইল থেকে। একটা বেজ মডেল থেকে আরো দরকারি লাইব্রেরি যোগ করা যায় এই ডকারে। পাওয়ারশেলে দেখি। নিচের ফোল্ডার এবং ফাইল বানাতে হবে আপনাকে। Dockerfile এর কনটেন্ট আপনার মতো হতে পারে। শুরুতে  Dockerfile ফাইলটা নোটপ্যাড দিয়ে তৈরি করি।
+
+```text
+PS C:\Users\Test\Dockerfile> dir
+
+Directory: C:\Users\Test\Dockerfile
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        10/9/2019   9:29 PM            208 Dockerfile
+```
+
+শুরুতে প্যারেন্ট ইমেজ। যেটা হবে "tensorflow/tensorflow:2.0.0-py3-jupyter", যার উপর ভিত্তি করে পুরো জিনিস চলবে। এটা শুরু হয় FROM ডিরেক্টিভ থেকে। সব ভেঙ্গে ভেঙ্গে লিখলাম।
 
 ```text
 FROM tensorflow/tensorflow:2.0.0-py3-jupyter
@@ -73,7 +85,27 @@ RUN apt-get update && pip install tensorflow-datasets
 RUN rm -rf /root/.cache/pip/*
 ```
 
-চালু করুন পাওয়ার-শেল, উইন্ডোজে। লিখুন;
+আমাদের বিল্ড করার পালা। 
+
+```text
+PS C:\Users\Test\Dockerfile> docker build .
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM tensorflow/tensorflow:2.0.0-py3-jupyter-pandas-sklearn
+ ---> 1a818d50f932
+......
+Successfully built 15bde597bf2c
+```
+
+পরীক্ষা করে দেখি। 
+
+```text
+PS C:\Users\Test\Dockerfile> docker images
+REPOSITORY              TAG                                            IMAGE ID            CREATED             SIZE
+tensorflow/tensorflow   2.0.0-py3-jupyter-pandas-sklearn-tf-datasets   15bde597bf2c        4 weeks ago         1.45GB
+tensorflow/tensorflow   2.0.0-py3-jupyter                              c652a4fc8a4f        5 weeks ago         1.22GB
+```
+
+আবার চালু করুন পাওয়ার-শেল, উইন্ডোজে। আমাদের একটা ফোল্ডার এক্সেস করতে শেয়ার করেছি। লিখুন;
 
 ```text
 docker run -it -p 8888:8888 -v "c:/users/test/google drive:/tf" --rm --name tensorflow2 tensorflow/tensorflow:2.0.0-py3-jupyter-pandas-sklearn-tf-datasets
