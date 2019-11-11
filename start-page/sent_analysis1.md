@@ -118,18 +118,7 @@ pd.get_dummies(labels)
 ```
 
   
-    .dataframe tbody tr th:only-of-type {  
-        vertical-align: middle;  
-    }  
-  
-    .dataframe tbody tr th {  
-        vertical-align: top;  
-    }  
-  
-    .dataframe thead th {  
-        text-align: right;  
-    }  
-
+ 
 
 |  | negative | positive |
 | :--- | :--- | :--- |
@@ -194,13 +183,6 @@ word_model.wv.most_similar(positive='আমি')
 ```
 
 ```text
-/usr/local/lib/python3.6/dist-packages/gensim/matutils.py:737: FutureWarning: Conversion of the second argument of issubdtype from `int` to `np.signedinteger` is deprecated. In future, it will be treated as `np.int64 == np.dtype(int).type`.
-  if np.issubdtype(vec.dtype, np.int):
-
-
-
-
-
 [('আমরা', 0.7259500026702881),
  ('তুমি', 0.6985121965408325),
  ('আপনি', 0.6706202030181885),
