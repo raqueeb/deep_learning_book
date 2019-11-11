@@ -9,7 +9,7 @@
 
 নিজে নিজে প্র্যাকটিস করুন: [https://github.com/raqueeb/TensorFlow2/blob/master/small\_sent\_analysis\_v2.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/small_sent_analysis_v2.ipynb) এবং [https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/small\_sent\_analysis\_v2.ipynb](https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/small_sent_analysis_v2.ipynb)
 
-কোলাব লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/small\_sent\_analysis.ipynb\_v2.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/small_sent_analysis.ipynb_v2.ipynb)
+কোলাব লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/small\_sent\_analysis\_v2.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/small_sent_analysis_v2.ipynb)
 {% endhint %}
 
 ### ছোট্ট একটা সেন্টিমেন্ট  অ্যানালাইসিস - ১
