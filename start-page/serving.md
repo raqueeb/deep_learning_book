@@ -100,14 +100,15 @@ PS E:\git_portable> docker run -t --rm -p 8501:8501 -v "E:\git_portable\serving\
 2019-11-10 07:11:17.252948: I tensorflow_serving/model_servers/server.cc:373] Exporting HTTP/REST API at:localhost:8501 ... 
 ```
 
-ডকারের ইমেজ দেখি। 
+ডকারের ইমেজ দেখি। আগের দুটো ইমেজের সাথে নতুনটা চলছে। 
 
 ```text
 PS E:\git_portable> docker ps
 
 CONTAINER ID        IMAGE                                                    COMMAND                  CREATED             STATUS              PORTS                              NAMES
 c6e0b94c10b9        tensorflow/tensorflow:2.0.0-py3-jupyter-pandas-sklearn   "bash -c 'source /et…"   2 hours ago         Up 2 hours          0.0.0.0:8888->8888/tcp             tensorflow2
-c0a477f441fb        tensorflow/serving                                       "/usr/bin/tf_serving…"   2 hours ago         Up 2 hours          8500/tcp, 0.0.0.0:8501->8501/tcp   hungry_robinson
+e8533ce33b0d        tensorflow/serving                                       "/usr/bin/tf_serving…"   About an hour ago   Up About an hour    8500/tcp, 0.0.0.0:8501->8501/tcp   youthful_nobel
+c0a477f441fb        tensorflow/serving                                       "/usr/bin/tf_serving…"   2 hours ago         Up 2 hours          8500/tcp, 0.0.0.0:8507->8507/tcp   hungry_robinson
 ```
 
 ৬. এখন উইন্ডোজ কমান্ড প্রম্পটে যাই। একটা প্রেডিকশন কোয়েরি করি। শুরুতে দেখি মডেল ঠিকমতো আছে কিনা দেখি কার্ল দিয়ে। x এর ভ্যালু ১, ৪, ৫ এবং ৯ হলে প্রেডিকশন কি হবে? উইন্ডোজে এস্কেপ ক্যারেক্টার নিয়ে সমস্যা হতে পারে। প্রেডিকশন রেজাল্ট দেখুন। ২.৫, ৪, ৪.৫ এবং ৬.৫। আপনি কার্ল দিয়ে REST এপিআই কল করেছেন। 
