@@ -211,5 +211,59 @@ C:\Users\test>dir resnet_v2
 
 ```
 
+এখন আমরা মডেলকে পয়েন্ট করি 
 
+```text
+C:\tfserving>docker run -p 8501:8501 --name tfserving_resnet --mount type=bind,source=//C/tfserving/resnet_v2/,target=/models/resnet -e MODEL_NAME=resnet -t tensorflow/serving
+
+2019-11-14 07:10:17.863436: I tensorflow_serving/model_servers/server.cc:85] Building single TensorFlow model file config:  model_name: resnet model_base_path: /models/resnet
+2019-11-14 07:10:17.863588: I tensorflow_serving/model_servers/server_core.cc:462] Adding/updating models.
+2019-11-14 07:10:17.863604: I tensorflow_serving/model_servers/server_core.cc:573]  (Re-)adding model: resnet
+2019-11-14 07:10:17.968520: I tensorflow_serving/core/basic_manager.cc:739] Successfully reserved resources to load servable {name: resnet version: 1538687457}
+2019-11-14 07:10:17.968584: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: resnet version: 1538687457}
+2019-11-14 07:10:17.968615: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: resnet version: 1538687457}
+2019-11-14 07:10:17.968647: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:31] Reading SavedModel from: /models/resnet/1538687457
+2019-11-14 07:10:18.015350: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:54] Reading meta graph with tags { serve }
+2019-11-14 07:10:18.051966: I external/org_tensorflow/tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-11-14 07:10:18.143144: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:202] Restoring SavedModel bundle.
+2019-11-14 07:10:18.695358: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:151] Running initialization op on SavedModel bundle at path: /models/resnet/1538687457
+2019-11-14 07:10:18.733315: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:311] SavedModel load for tags { serve }; Status: success. Took 764666 microseconds.
+2019-11-14 07:10:18.737417: I tensorflow_serving/servables/tensorflow/saved_model_warmup.cc:105] No warmup data file found at /models/resnet/1538687457/assets.extra/tf_serving_warmup_requests
+2019-11-14 07:10:18.756949: I tensorflow_serving/core/loader_harness.cc:87] Successfully loaded servable version {name: resnet version: 1538687457}
+2019-11-14 07:10:18.776475: I tensorflow_serving/model_servers/server.cc:353] Running gRPC ModelServer at 0.0.0.0:8500 ...
+[warn] getaddrinfo: address family for nodename not supported
+2019-11-14 07:10:18.796058: I tensorflow_serving/model_servers/server.cc:373] Exporting HTTP/REST API at:localhost:8501 ...
+[evhttp_server.cc : 238] NET_LOG: Entering the event loop ...
+```
+
+সার্ভার ঠিকমতো কাজ করছে কিনা দেখি। 
+
+```text
+C:\tfserving>curl http://localhost:8501/v1/models/resnet
+
+{
+ "model_version_status": [
+  {
+   "version": "1538687457",
+   "state": "AVAILABLE",
+   "status": {
+    "error_code": "OK",
+    "error_message": ""
+   }
+  }
+ ]
+}
+```
+
+দেখি ক্লায়েন্ট কিভাবে কাজ করে? তার আগে একটা ক্লায়েন্ট ডাউনলোড করে নেই যা একটা বেড়ালের ছবি ইন্টারনেট থেকে নামিয়ে আমাদের সার্ভারে পাঠিয়ে দেখবে প্রেডিকশন ক্লাস কি আর তার পাশাপাশি রেসপন্স সময় কতো?
+
+```text
+C:\tfserving>curl -o resnet_client.py https://raw.githubusercontent.com/tensorflow/serving/master/tensorflow_serving/example/resnet_client.py
+
+    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  2572  100  2572    0     0   2572      0  0:00:01  0:00:01 --:--:--  2572
+
+C:\tfserving>py resnet_client.py
+```
 
