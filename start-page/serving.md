@@ -267,5 +267,5 @@ C:\tfserving>curl -o resnet_client.py https://raw.githubusercontent.com/tensorfl
 C:\tfserving>py resnet_client.py
 ```
 
-এখানে কি মিসিং আছে? এটা কিভাবে করা সম্ভব?
+বলুনতো ,এখানে কি মিসিং আছে? আর - এটা কিভাবে করা সম্ভব? খুব সোজা কিন্তু। 
 
