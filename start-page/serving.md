@@ -269,3 +269,9 @@ C:\tfserving>py resnet_client.py
 
 বলুনতো ,এখানে কি মিসিং আছে? আর - এটা কিভাবে করা সম্ভব? খুব সোজা কিন্তু। 
 
+```text
+# শুরুতে ইনস্টল করে নিতে হবে requests
+!pip install -q requests
+import requests
+```
+
