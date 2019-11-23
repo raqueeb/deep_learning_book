@@ -41,7 +41,7 @@
 * [সার্চে এমবেডিং: পরের শব্দটা কি হবে?](start-page/search_emb.md)
 * [শব্দের সিমিলারিটি, কাছাকাছি অর্থ, লাইকলিহুড - সঙ্গে 'ফাস্টটেক্সট' এবং 'ওয়ার্ড২ভেক'](start-page/similarity.md)
 * [বাংলায় ছোট্ট সেন্টিমেন্ট অ্যানালাইসিস](start-page/sent_analysis1.md)
-* [বাংলায় এন্ড টু এন্ড অ্যাপ্লিকেশন, টেন্সর-ফ্লো সার্ভিং/ফ্লাস্ক](start-page/undefined.md)
+* [বাংলায় এন্ড টু এন্ড অ্যাপ্লিকেশন, টেন্সর-ফ্লো হাব](start-page/tf_hub_sentiment_analysis.md)
 * [কি করবো সামনে?](start-page/future_work.md)
 * [আরো সাহায্য এবং কৃতজ্ঞতা](start-page/help_citation.md)
 
