@@ -5,7 +5,7 @@
 {% hint style="info" %}
 আমরা বই পড়ছি, নোটবুক কেন পড়বো?
 
-যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। গিটহাব লিংক: [https://github.com/raqueeb/TensorFlow2/blob/master/classification\_book.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/classification_book.ipynb) এবং গুগল কোলাব  লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/classification\_book.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/classification_book.ipynb) 
+যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে "এনবি ভিউয়ার", গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। গিটহাব লিংক: [https://github.com/raqueeb/TensorFlow2/blob/master/classification\_book.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/classification_book.ipynb) অথবা [https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/classification\_book.ipynb](https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/classification_book.ipynb) এবং গুগল কোলাব  লিংক: [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/classification\_book.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/classification_book.ipynb) 
 {% endhint %}
 
 ### ফ্যাশন MNIST ডেটাসেট
