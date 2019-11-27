@@ -22,6 +22,7 @@
   * [গুগল ডুপ্লেক্স](start-page/why_deep_learning/google-duplex.md)
   * [টার্গেটের গল্প](start-page/why_deep_learning/target.md)
 * [ঝিঁঝিঁপোকার থার্মোমিটার](start-page/cricket-therm.md)
+* [এক নজরে 'টেন্সর-ফ্লো' ইকো-সিস্টেম](start-page/undefined.md)
 * [ফ্যাশন MNIST ডেটাসেটের ক্লাসিফিকেশন](start-page/mnist-fashion.md)
 * [রিগ্রেশন এবং ক্লাসিফিকেশন](start-page/what_we_learnt.md)
 * [ডিপ লার্নিং কেন? নন-লিনিয়ার সমস্যা, ফিচার ক্রস](start-page/feature_crosses.md)
