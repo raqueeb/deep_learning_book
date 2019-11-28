@@ -7,7 +7,7 @@
 * [এই বইটা থেকে কি আশা করছি?](start-page/why-another-book.md)
 * [‘ডিপ লার্নিং’ কি হাইপ? কেন এতো দেরি হলো?](start-page/why-late.md)
 * [কৃতজ্ঞতা](start-page/courtesy.md)
-* [কেন শিখবেন মেশিন লার্নিং?](start-page/why-ml.md)
+* [কেন শিখবেন মেশিন/ডিপ লার্নিং?](start-page/why-ml.md)
 * [বইটা কিভাবে ব্যবহার করবেন?](start-page/how-to-nav.md)
 * [গুগল কোলাব/জুপিটার টেন্সর-ফ্লো ২.x ডকার](start-page/colab-docker.md)
 * [কিছুই জানিনা, শুরু করবো কোথা থেকে?](start-page/how-to-start.md)
