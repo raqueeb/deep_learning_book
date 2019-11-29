@@ -1,7 +1,9 @@
 # টেন্সর-ফ্লো ডেটাসেট এপিআই দিয়ে কনভল্যুশনাল নিউরাল নেটওয়ার্ক
 
 {% hint style="info" %}
-আপডেটেড নোটবুক পাবেন এখানে [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/Classification\_CNNs-v2.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/Classification_CNNs-v2.ipynb)
+আপডেটেড নোটবুক পাবেন এখানে 
+
+[https://github.com/raqueeb/TensorFlow2/blob/master/Classification\_CNNs-v2.ipynb](https://github.com/raqueeb/TensorFlow2/blob/master/Classification_CNNs-v2.ipynb) অথবা [https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/Classification\_CNNs-v2.ipynb](https://colab.research.google.com/github/raqueeb/TensorFlow2/blob/master/Classification_CNNs-v2.ipynb)
 
 \(গিটবুক/এনবিভিউয়ার থেকে পড়ুন\) [https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/Classification\_CNNs-v2.ipynb](https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/Classification_CNNs-v2.ipynb)
 {% endhint %}
