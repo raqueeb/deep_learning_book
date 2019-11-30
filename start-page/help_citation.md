@@ -10,5 +10,7 @@
 
 ৪. রোডম্যাপ জেনে রাখা ভালো। লিংক: www.tensorflow.org/community/roadmap
 
+১০. ড্যান বেকারের "ইন্ট্রোডাকশন টু ডিপ লার্নিং ইন পাইথন", লিংক https://www.datacamp.com/courses/deep-learning-in-python
+
 এই বইটা লিখতে সাহায্য করেছেন অনেকেই। তাদের নাম থাকবে এখানে। 
 
