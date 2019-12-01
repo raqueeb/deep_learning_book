@@ -73,11 +73,11 @@ print(output)
 import numpy as np
 
 # আমাদের প্রেডিকশন করার জন্য ডেটা পয়েন্ট, ছবির সাথে মিলিয়ে দেখুন
-input_data = np.array([2, 3])
+input_data = np.array([-1, 2])
 
 # আমাদের ডিকশনারী
-weights =   {'node_0': np.array([1, 1]),
-             'node_1': np.array([-1, 1]),
+weights =   {'node_0': np.array([3, 3]),
+             'node_1': np.array([1, 5]),
              'output': np.array([2, -1])
             }
 
