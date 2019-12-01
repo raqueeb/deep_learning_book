@@ -70,6 +70,17 @@ print(output)
 ![&#x9B0;&#x9C7;&#x9B2;&#x9CD;&#x9AF;&#x9C1; &#x9AB;&#x9BE;&#x982;&#x9B6;&#x9A8;](../.gitbook/assets/relu81.png)
 
 ```text
+import numpy as np
+
+# আমাদের প্রেডিকশন করার জন্য ডেটা পয়েন্ট, ছবির সাথে মিলিয়ে দেখুন
+input_data = np.array([2, 3])
+
+# আমাদের ডিকশনারী
+weights =   {'node_0': np.array([1, 1]),
+             'node_1': np.array([-1, 1]),
+             'output': np.array([2, -1])
+            }
+
 def relu(input):
     '''রেল্যু ফাংশনকে ডিফাইন করে দিচ্ছি এখানে'''
     # ইনপুটে যা পাবো সেটাকে ম্যাক্সিমাম যা আসবে, অথবা ঋনাত্বক আসলে "০" : output
