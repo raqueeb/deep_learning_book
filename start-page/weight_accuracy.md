@@ -75,6 +75,54 @@ print(output)
 
 ![&#x997;&#x9CD;&#x9B0;&#x9C7;&#x9A1;&#x9BF;&#x9AF;&#x9BC;&#x9C7;&#x9A8;&#x9CD;&#x99F; &#x9A1;&#x9BF;&#x9B8;&#x9C7;&#x9A8;&#x9CD;&#x99F; &#x98F;&#x9B0; &#x9A8;&#x9BF;&#x99A;&#x9C7; &#x9A8;&#x9BE;&#x9AE;&#x9BE; ](../.gitbook/assets/grad51.png)
 
+এই জিনিসটা আমাদের ওয়েটের জন্য প্রযোজ্য। এরর বেশি হলে বড় বড় স্টেপে এরর কমিয়ে শেষে সেটা আস্তে আস্তে অল্প অল্প করে ওয়েটের ভ্যালু পাল্টে টার্গেট ভ্যালুর কাছাকাছি পৌঁছানো যায়। এটাকে লার্নিং রেট বলা যায়। কিভাবে কম কম করে নিচে নাম যায়? স্লোপের ক্যালকুলেশন করে। এই জিনিস আমরা ক্যালকুলাস মানে চেইন রুল দিয়ে বের করতে পারি। তবে শুরুতে স্লোপ এর হিসেব বের করি। 
+
+```text
+# প্রেডিকশন ক্যাল্কুলেট করি: preds
+preds = (weights * input_data).sum()
+
+# এরর ক্যালকুলেট করি: error
+error = preds - target
+
+# স্লোপ ক্যালকুলেট করি: slope
+slope = 2 * input_data * error
+
+# স্লোপ প্রিন্ট করি 
+print(slope)
+[14 28 42]
+```
+
+#### মডেলের ওয়েট কিভাবে ভালো লেভেলে যাবে?
+
+```text
+# Set the learning rate: learning_rate
+learning_rate = 0.01
+
+# Calculate the predictions: preds
+preds = (weights * input_data).sum()
+
+# Calculate the error: error
+error = preds - target
+
+# Calculate the slope: slope
+slope = 2 * input_data * error
+
+# Update the weights: weights_updated
+weights_updated = weights - learning_rate * slope
+
+# Get updated predictions: preds_updated
+preds_updated = (weights_updated * input_data).sum()
+
+# Calculate updated error: error_updated
+error_updated = preds_updated - target
+
+# Print the original error
+print(error)
+
+# Print the updated error
+print(error_updated)
+```
+
 #### কিভাবে ওয়েট পাল্টালে অ্যাক্যুরেসি পাল্টায় 
 
 শুরুর ওয়েট দিয়ে টার্গেট ভ্যালু না ধরতে পারলে সেটা পাল্টে নতুন ওয়েট দিয়ে দেখি এখানে। 
