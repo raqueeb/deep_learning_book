@@ -69,6 +69,8 @@ print(output)
 
 ![&#x9B0;&#x9C7;&#x9B2;&#x9CD;&#x9AF;&#x9C1; &#x9AB;&#x9BE;&#x982;&#x9B6;&#x9A8;](../.gitbook/assets/relu81.png)
 
+নতুন একটা নেটওয়ার্ক দেখি। এখানে ইনপুট -১, ২ এবং ওয়েট হচ্ছে \(৩, ৩\), \(১, ৫\) এবং \(২, -১\) যা দেয়া হয়েছে ডিকশনারীতে। এরপর রেল্যু  
+
 ```text
 import numpy as np
 
@@ -105,6 +107,7 @@ model_output = (hidden_layer_outputs * weights['output']).sum()
 
 # Print model output
 print(model_output)
+52
 ```
 
 #### ব্যাকওয়ার্ড প্রোপাগেশন 
