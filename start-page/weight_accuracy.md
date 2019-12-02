@@ -59,58 +59,9 @@ print(output)
 
 এখন আসি আমদের আউটপুট এর ব্যাপারে। হিডেন লেয়ারের ভ্যালুগুলোকে গুণ করতে হবে তার এসোসিয়েটেড ওয়েট দিয়ে। সেই গুণফলগুলোকে যোগ করলে তার উত্তর আসে ৯। ১০- ১= ৯। আর বাকি থাকে কি? ফরওয়ার্ড প্রপাগেশন বোঝা শেষ। আমাদের এই ছোট্ট এই নিউরাল নেটওয়ার্কের। 
 
-#### এক্টিভেশন ফাংশন, লিনিয়ারিটি এবং নন-লিনিয়ারিটি 
-
-এতক্ষণ আমরা যা করলাম সেটা হয়তোবা ডট প্রডাক্ট হিসেবে কাজ করবে - তবে এ ধরনের সিদ্ধান্ত নিতে গেলে ডিপ লার্নিং মডেলে নন-লিনিয়ারিটি সমস্যা সমাধান করতে হবে। আগেই বলেছি নিউরাল নেটওয়ার্কে তার আসল ক্ষমতা দেখাতে হলে এখানে একটা 'অ্যাক্টিভেশন ফাংশন' ব্যবহার করতে হবে। কেন ব্যবহার করতে হবে সেটা আপনারা দেখেছেন চাঁদ আকারের ডাটা সেটে। এই অ্যাক্টিভেশন ফাংশনই পারে ডাটাতে নন-লিনিয়ারিটি বুঝতে।এই এক্টিভেশন ফাংশন ব্যবহার করবো প্রতিটা নোডে, যখন দরকার পড়বে। 
-
-{% hint style="info" %}
-রেল্যু ফাংশন হচ্ছে ইনপুট হিসেবে যা দেবেন, সেটা যদি নেগেটিভ অর্থাৎ ঋনাত্বক সংখ্যা হয় তাহলে সে "০" রিটার্ন করবে। তবে ০ ছাড়া ইনপুট হিসেবে যদি পজিটিভ সংখ্যা থাকে তাহলে ওই সংখ্যাই রিটার্ন করবে। উদাহরণ, output = max\(0, input\) অর্থাৎ **relu\(3\) = 3** এবং **relu\(-3\) = 0**
-{% endhint %}
-
-![&#x9B0;&#x9C7;&#x9B2;&#x9CD;&#x9AF;&#x9C1; &#x9AB;&#x9BE;&#x982;&#x9B6;&#x9A8;](../.gitbook/assets/relu81.png)
-
-নতুন একটা নেটওয়ার্ক দেখি। এখানে ইনপুট -১, ২ এবং ওয়েট হচ্ছে \(৩, ৩\), \(১, ৫\) এবং \(২, -১\) যা দেয়া হয়েছে ডিকশনারীতে। এরপর রেল্যু  
-
-```text
-import numpy as np
-
-# আমাদের প্রেডিকশন করার জন্য ডেটা পয়েন্ট, ছবির সাথে মিলিয়ে দেখুন
-input_data = np.array([-1, 2])
-
-# আমাদের ডিকশনারী
-weights =   {'node_0': np.array([3, 3]),
-             'node_1': np.array([1, 5]),
-             'output': np.array([2, -1])
-            }
-
-def relu(input):
-    '''রেল্যু ফাংশনকে ডিফাইন করে দিচ্ছি এখানে'''
-    # ইনপুটে যা পাবো সেটাকে ম্যাক্সিমাম যা আসবে, অথবা ঋনাত্বক আসলে "০" : output
-    output = max(0, input)
-    
-    # Return the value just calculated
-    return(output)
-
-# Calculate node 0 value: node_0_output
-node_0_input = (input_data * weights['node_0']).sum()
-node_0_output = relu(node_0_input)
-
-# Calculate node 1 value: node_1_output
-node_1_input = (input_data * weights['node_1']).sum()
-node_1_output = relu(node_1_input)
-
-# Put node values into array: hidden_layer_outputs
-hidden_layer_outputs = np.array([node_0_output, node_1_output])
-
-# Calculate model output (do not apply relu)
-model_output = (hidden_layer_outputs * weights['output']).sum()
-
-# Print model output
-print(model_output)
-52
-```
-
 #### ব্যাকওয়ার্ড প্রোপাগেশন 
+
+তবে যেটা হয় যে 
 
 ```text
 import numpy as np
@@ -179,5 +130,56 @@ print(model_output_1)
 print(error_0)
 print(error_1)
 
+```
+
+#### এক্টিভেশন ফাংশন, লিনিয়ারিটি এবং নন-লিনিয়ারিটি 
+
+এতক্ষণ আমরা যা করলাম সেটা হয়তোবা ডট প্রডাক্ট হিসেবে কাজ করবে - তবে এ ধরনের সিদ্ধান্ত নিতে গেলে ডিপ লার্নিং মডেলে নন-লিনিয়ারিটি সমস্যা সমাধান করতে হবে। আগেই বলেছি নিউরাল নেটওয়ার্কে তার আসল ক্ষমতা দেখাতে হলে এখানে একটা 'অ্যাক্টিভেশন ফাংশন' ব্যবহার করতে হবে। কেন ব্যবহার করতে হবে সেটা আপনারা দেখেছেন চাঁদ আকারের ডাটা সেটে। এই অ্যাক্টিভেশন ফাংশনই পারে ডাটাতে নন-লিনিয়ারিটি বুঝতে।এই এক্টিভেশন ফাংশন ব্যবহার করবো প্রতিটা নোডে, যখন দরকার পড়বে। 
+
+{% hint style="info" %}
+রেল্যু ফাংশন হচ্ছে ইনপুট হিসেবে যা দেবেন, সেটা যদি নেগেটিভ অর্থাৎ ঋনাত্বক সংখ্যা হয় তাহলে সে "০" রিটার্ন করবে। তবে ০ ছাড়া ইনপুট হিসেবে যদি পজিটিভ সংখ্যা থাকে তাহলে ওই সংখ্যাই রিটার্ন করবে। উদাহরণ, output = max\(0, input\) অর্থাৎ **relu\(3\) = 3** এবং **relu\(-3\) = 0**
+{% endhint %}
+
+![&#x9B0;&#x9C7;&#x9B2;&#x9CD;&#x9AF;&#x9C1; &#x9AB;&#x9BE;&#x982;&#x9B6;&#x9A8;](../.gitbook/assets/relu81.png)
+
+নতুন একটা নেটওয়ার্ক দেখি। এখানে ইনপুট -১, ২ এবং ওয়েট হচ্ছে \(৩, ৩\), \(১, ৫\) এবং \(২, -১\) যা দেয়া হয়েছে ডিকশনারীতে। এরপর রেল্যু  
+
+```text
+import numpy as np
+
+# আমাদের প্রেডিকশন করার জন্য ডেটা পয়েন্ট, ছবির সাথে মিলিয়ে দেখুন
+input_data = np.array([-1, 2])
+
+# আমাদের ডিকশনারী
+weights =   {'node_0': np.array([3, 3]),
+             'node_1': np.array([1, 5]),
+             'output': np.array([2, -1])
+            }
+
+def relu(input):
+    '''রেল্যু ফাংশনকে ডিফাইন করে দিচ্ছি এখানে'''
+    # ইনপুটে যা পাবো সেটাকে ম্যাক্সিমাম যা আসবে, অথবা ঋনাত্বক আসলে "০" : output
+    output = max(0, input)
+    
+    # Return the value just calculated
+    return(output)
+
+# Calculate node 0 value: node_0_output
+node_0_input = (input_data * weights['node_0']).sum()
+node_0_output = relu(node_0_input)
+
+# Calculate node 1 value: node_1_output
+node_1_input = (input_data * weights['node_1']).sum()
+node_1_output = relu(node_1_input)
+
+# Put node values into array: hidden_layer_outputs
+hidden_layer_outputs = np.array([node_0_output, node_1_output])
+
+# Calculate model output (do not apply relu)
+model_output = (hidden_layer_outputs * weights['output']).sum()
+
+# Print model output
+print(model_output)
+52
 ```
 
