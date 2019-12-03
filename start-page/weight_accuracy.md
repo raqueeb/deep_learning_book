@@ -95,31 +95,31 @@ print(slope)
 #### মডেলের ওয়েট কিভাবে ভালো লেভেলে যাবে?
 
 ```text
-# Set the learning rate: learning_rate
+# লার্নিং রেট ঠিক করি: learning_rate
 learning_rate = 0.01
 
-# Calculate the predictions: preds
+# প্রেডিকশন ক্যালকুলেট করি: preds
 preds = (weights * input_data).sum()
 
-# Calculate the error: error
+# এরর ক্যালকুলেট করি : error
 error = preds - target
 
-# Calculate the slope: slope
+# স্লোপ ক্যালকুলেট করি: slope
 slope = 2 * input_data * error
 
-# Update the weights: weights_updated
+# ওয়েট আপডেট করি: weights_updated
 weights_updated = weights - learning_rate * slope
 
-# Get updated predictions: preds_updated
+# প্রেডিকশন আপডেট নেই : preds_updated
 preds_updated = (weights_updated * input_data).sum()
 
-# Calculate updated error: error_updated
+# এররের আপডেট নেই: error_updated
 error_updated = preds_updated - target
 
-# Print the original error
+# শুরুর এরর প্রিন্ট করি 
 print(error)
 
-# Print the updated error
+# নতুন এরর প্রিন্ট করি 
 print(error_updated)
 ```
 
@@ -142,6 +142,7 @@ weights_0 = {'node_0': [2, 1],
 # আসল টার্গেট ভ্যালু, এরর বের করার জন্য লাগবে 
 target_actual = 3
 
+# দুটো মেথড ডিফাইন করি 
 def relu(input):
     output = max(0, input)
     return output
@@ -190,6 +191,20 @@ print(error_1)
 ```
 
 #### ব্যাকওয়ার্ড প্রোপাগেশন 
+
+আমরা এতক্ষন যে স্লোপ নিয়ে কথা বললাম, সেটাকে অপ্টিমাইজ করার জন্য আরেকটা টেকনিক ব্যবহার করবো যার নাম হচ্ছে ব্যাক প্রোপাগেশন। এর কাজ ফরওয়ার্ড প্রোপাগেশনের মতোই তবে সেটা হবে পেছন থেকে। আউটপুট লেয়ার থেকে এরর নিয়ে সেটাকে পেছন থেকে হিডেন লেয়ারের দিয়ে পাঠিয়ে একদম ইনপুট পর্যন্ত ওয়েটগুলোকে আপডেট করার এই প্রসেস আসলেই দেখার মতো। এখানে গ্রাডিয়েন্ট ডিসেন্ট নিউরাল নেটওয়ার্কের সব ওয়েটগুলোকে আপডেট করছে আউটপুটের প্রেডিকশন এরর থেকে, সেটা ছবিতে দেখুন। এখানে এই লস ফাংশনের স্লোপগুলো ওয়েটগুলোকে আপডেট করছে যতক্ষণ পর্যন্ত এরর কমে না আসছে। এটা  কাজ করে একেকটা লেয়ার ধরে পেছনে। এই ব্যাপারে একটা চমৎকার ভিডিও আছে "থ্রীব্লুওয়ানব্রাউন" থেকে। লিংক [https://youtu.be/Ilg3gGewQ5U](https://youtu.be/Ilg3gGewQ5U) .
+
+A round of backpropagation
+
+In the network shown below, we have done forward propagation, and node values calculated as part of forward propagation are shown in white. The weights are shown in black. Layers after the question mark show the slopes calculated as part of back-prop, rather than the forward-prop values. Those slope values are shown in purple.
+
+একটা উদাহরণ দেখি। আমরা যেহেতু ফরওয়ার্ড প্রোপাগেশন করেছি, সেকারণে নোড ভ্যালুগুলোকে পেয়েছি নিচের ছবিতে সাদা বক্সে। এখানে ওয়েটগুলোকে দেখানো হয়েছে কালো অক্ষরে।  
+
+This network again uses the ReLU activation function, so the slope of the activation function is 1 for any node receiving a positive value as input. Assume the node being examined had a positive value \(so the activation function's slope is 1\).
+
+
+
+
 
 #### এক্টিভেশন ফাংশন, লিনিয়ারিটি এবং নন-লিনিয়ারিটি 
 
