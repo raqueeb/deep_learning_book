@@ -9,6 +9,7 @@
 * [কৃতজ্ঞতা](start-page/courtesy.md)
 * [কেন শিখবেন মেশিন/ডিপ লার্নিং?](start-page/why-ml.md)
 * [বইটা কিভাবে ব্যবহার করবেন?](start-page/how-to-nav.md)
+* [কেন এই বইটা অন্য প্রোগ্রামিং বই থেকে একটু আলাদা?](start-page/why_diff.md)
 * [গুগল কোলাব/জুপিটার টেন্সর-ফ্লো ২.x ডকার](start-page/colab-docker.md)
 * [কিছুই জানিনা, শুরু করবো কোথা থেকে?](start-page/how-to-start.md)
 * [কেন ডীপ লার্নিং?](start-page/why_deep_learning/README.md)
