@@ -4,7 +4,7 @@
 
 শুরুতে আমরা একটা অ্যান্ড্রয়েড স্কেলিটন অ্যাপ এর সোর্স কোড ডাউনলোড করে নেই টেন্সরফ্লো এর গিটহাব পেজ থেকে। লিংক: [https://github.com/tensorflow/examples/archive/master.zip](https://github.com/tensorflow/examples/archive/master.zip)।  সেটাকে আনজিপ করে এক্সট্র্যাক্ট করে নেই একটা ফোল্ডারে। 
 
-**২. অ্যাপটাকে ইমপোর্ট করে নিয়ে আসি অ্যান্ড্রয়েড ষ্টুডিওতে**
+**২. অ্যাপের সোর্সকোড ইমপোর্ট করে নিয়ে আসি অ্যান্ড্রয়েড ষ্টুডিওতে**
 
 1. চালু করি অ্যান্ড্রয়েড ষ্টুডিও। 
 2. ক্লিক করি "ইমপোর্ট প্রজেক্ট", মানে Import project \(Gradle, Eclipse ADT, etc.\)।
@@ -15,8 +15,31 @@
 
 * মনে আছে এমনিস্ট টেন্সরফ্লো লাইট মডেলের ফাইলটার কথা? সেটাকে mnist.tflite কপি করে রেখে দেই lite/codelabs/digit\_classifier/android/start/app/src/main/assets/ ফোল্ডারে। 
 
-৪. সোর্সে দেয়া  build.gradle ফাইল দরকার মতো আপডেট 
+**৪. সোর্সে দেয়া  build.gradle ফাইল দরকার মতো আপডেট করি** 
 
-1. 
+1. অ্যাপ মডিউলের build.gradle অংশে নিচের ব্লক খুঁজে বের করি। 
 
+```text
+dependencies {
+  ...
+  // TODO: Add TF Lite
+  ...
+}
+```
+
+২. আমরা এখানে টেন্সরফ্লো লাইট ব্যবহার করছি সেটা দেখিয়ে দিতে হবে ডিপেন্ডেন্সিতে। যোগ করে দেই নিচের অংশটাকে।  
+
+```text
+implementation 'org.tensorflow:tensorflow-lite:1.14.0'
+```
+
+৩. এরপর নিচের কোড ব্লকটা খুঁজে বের করি। 
+
+```text
+android {
+  ...
+  // TODO: Add an option to avoid compressing TF Lite model file
+  ...
+}
+```
 
