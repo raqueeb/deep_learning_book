@@ -11,13 +11,17 @@
 3. একটা ফোল্ডারকে দেখিয়ে দেই যেটা আমরা এক্সট্র্যাক্ট করেছিলাম। ফোল্ডারের নাম হচ্ছে lite/codelabs/digit\_classifier/android/start/
 4. ইমপোর্ট প্রসেসটাকে শেষ পর্যন্ত চলতে দিতে হবে। 
 
+![&#x9AA;&#x9C1;&#x9B0;&#x9CB; &#x9AB;&#x9CB;&#x9B2;&#x9CD;&#x9A1;&#x9BE;&#x9B0; &#x9A6;&#x9C7;&#x996;&#x9BF;&#x9DF;&#x9C7; &#x9A6;&#x9BF;&#x9A8; &#x98F;&#x996;&#x9BE;&#x9A8;&#x9C7; ](../.gitbook/assets/gra21.png)
+
 **৩. আগে ডাউনলোড করা টেন্সরফ্লো লাইট মডেল রাখতে হবে অ্যাসেট ফোল্ডারে** 
 
-* মনে আছে এমনিস্ট টেন্সরফ্লো লাইট মডেলের ফাইলটার কথা? সেটাকে mnist.tflite কপি করে রেখে দেই lite/codelabs/digit\_classifier/android/start/app/src/main/assets/ ফোল্ডারে। 
+* মনে আছে এমনিস্ট টেন্সরফ্লো লাইট মডেলের ফাইলটার কথা? সেটাকে mnist.tflite কপি করে রেখে দেই আপনার নিজস্ব এক্সট্র্যাক্ট করা lite/codelabs/digit\_classifier/android/start/app/src/main/assets/ ফোল্ডারে। আমারটা ছবিতে দেখুন। 
 
 **৪. সোর্সে দেয়া  build.gradle ফাইল দরকার মতো আপডেট করি** 
 
 1. অ্যাপ মডিউলের build.gradle অংশে নিচের ব্লক খুঁজে বের করি। 
+
+![](../.gitbook/assets/studio12.png)
 
 ```text
 dependencies {
@@ -40,6 +44,34 @@ android {
   ...
   // TODO: Add an option to avoid compressing TF Lite model file
   ...
+}
+```
+
+৪. আমরা যখন অ্যান্ড্রয়েড অ্যাপ বাইনারি বানাবো, টেন্সরফ্লো লাইট মডেলটাকে কমপ্রেস করবো না। আমাদের মডেল ফাইলটা অপ্টিমাইজ না করেই মাত্র কয়েক কিলোবাইট। অবিশ্বাস্য, তাই না! ডান পাশে Sync Now বাটন চাপ দেই। 
+
+**৫. টেন্সরফ্লো লাইট ইন্টারপ্রেটারকে ইনিশিয়ালাইজ করি**
+
+১. আমাদের অ্যান্ড্রয়েড অ্যাপে টেন্সরফ্লো লাইট চালাতে হবে দরকার হবে org.tensorflow.lite.Interpreter জাভা ক্লাস। ডোমেইনে উল্টো দিক থেকে বোঝা সহজ হবে। এখানে আমাদেরকে শুরুতে Interpreter ইনস্ট্যান্সকে ইনিশিয়ালাইজ করে নিতে হবে মডেলের জন্য। 
+
+২. অ্যান্ড্রয়েড স্টুডিওর বাঁ দিকে app মডিউলের নিচে দেখুন DigitClassifier যা আসলে ফাইল হিসেবে DigitClassifier.kt এক্সটেনশন হিসেবে আছে। এখানে আমাদের টেন্সরফ্লো লাইটের কোড যোগ করবো। 
+
+৩. শুরুতে DigitClassifier ক্লাসে একটা ফিল্ড যোগ করি। 
+
+```text
+class DigitClassifier(private val context: Context) {
+  private var interpreter: Interpreter? = null
+  ...
+}
+```
+
+৪. অ্যান্ড্রয়েড ষ্টুডিও একটা এরর দেবে এখানে। এররটা  হতে পারে Unresolved reference: Interpreter, তবে সেটাকে মেটাবো import org.tensorflow.lite.Interpreter যোগ করে। 
+
+৫. নিচের কোডব্লক খুঁজে বের করি এখানে। 
+
+```text
+private fun initializeInterpreter() {
+    // TODO: Load the TF Lite model from file and initialize an interpreter.
+    ...
 }
 ```
 
