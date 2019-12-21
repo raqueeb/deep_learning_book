@@ -1,7 +1,24 @@
-## মোবাইল অ্যাপের জন্য সাধারণ "এমনিস্ট" মডেল ট্রেনিং, টেন্সরফ্লো লাইট দিয়ে (২)
+---
+description: (পুরো চ্যাপ্টার একটা নোটবুক)
+---
 
-হালের ফ্যাশন 'এমনিস্ট' ডেটাসেট নিয়ে কাজ করলেও আমার মন পড়েছিল কিভাবে আসল 'এমনিস্ট' নিয়ে কাজ করা যায়। সেই সুযোগটা নিলাম এই মোবাইল অ্যাপ এর জন্য মডেল তৈরি করতে গিয়ে। একই কোড কাজ করবে এখানে, ফ্যাশন এমনিস্টএর মতো। শুধুমাত্র অ্যাডঅন, মডেলটাকে কনভার্ট করবো টেন্সরফ্লো লাইটে - মোবাইল ডিভাইসে চালানোর জন্য  
+# মোবাইল অ্যাপের জন্য সাধারণ "এমনিস্ট" মডেল ট্রেনিং, টেন্সরফ্লো লাইট দিয়ে \(২\)
 
+{% hint style="info" %}
+আমরা বই পড়ছি, নোটবুক কেন পড়বো? 
+
+নোটবুক সবসময় আপডেটেড। এই বই থেকেও। 
+
+যেহেতু গিটবুকে নোটবুক ঠিকমতো রেন্ডার হয়না, সেকারণে গুগল কোলাব এবং গিটহাবে দেখা উচিৎ। গিটহাব লিংক: 
+
+নিজে নিজে প্র্যাকটিস করুন: [https://github.com/raqueeb/tf\_lite\_android/blob/master/digitclassifier.ipynb](https://github.com/raqueeb/tf_lite_android/blob/master/digitclassifier.ipynb) এবং [https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/digitclassifier.ipynb](https://nbviewer.jupyter.org/github/raqueeb/TensorFlow2/blob/master/digitclassifier.ipynb)
+
+কোলাব লিংক: [https://colab.research.google.com/github/raqueeb/tf\_lite\_android/blob/master/digitclassifier.ipynb](https://colab.research.google.com/github/raqueeb/tf_lite_android/blob/master/digitclassifier.ipynb)
+{% endhint %}
+
+## মোবাইল অ্যাপের জন্য সাধারণ "এমনিস্ট" মডেল ট্রেনিং, টেন্সরফ্লো লাইট দিয়ে \(২\)
+
+হালের ফ্যাশন 'এমনিস্ট' ডেটাসেট নিয়ে কাজ করলেও আমার মন পড়েছিল কিভাবে আসল 'এমনিস্ট' নিয়ে কাজ করা যায়। সেই সুযোগটা নিলাম এই মোবাইল অ্যাপ এর জন্য মডেল তৈরি করতে গিয়ে। একই কোড কাজ করবে এখানে, ফ্যাশন এমনিস্টএর মতো। শুধুমাত্র অ্যাডঅন, মডেলটাকে কনভার্ট করবো টেন্সরফ্লো লাইটে - মোবাইল ডিভাইসে চালানোর জন্য
 
 ```python
 # শুধুমাত্র টেন্সরফ্লো ২.x এর জন্য
@@ -25,17 +42,16 @@ import random
 print(tf.__version__)
 ```
 
-    TensorFlow 2.x selected.
-    2.1.0-rc1
-
+```text
+TensorFlow 2.x selected.
+2.1.0-rc1
+```
 
 ## ডাউনলোড করি "এমনিস্ট" ডেটাসেট
 
 একই ৬০,০০০ এবং ১০,০০০ ট্রেনিং এবং টেস্ট ইমেজ তবে এবার হাতেলেখা ০ থেকে ৯ পর্যন্ত ইংরেজি সংখ্যা। ০ থেকে ৯ সংখ্যা মানে আগের মতো ১০টা ক্লাস।
 
-আগের মতো ইমেজগুলো ২৮ x ২৮ পিক্সেলের গ্রেস্কেল ইমেজ। ছবি দেখুন।
-![MNIST sample](https://github.com/khanhlvg/DigitClassifier/raw/master/images/mnist.png)
-
+আগের মতো ইমেজগুলো ২৮ x ২৮ পিক্সেলের গ্রেস্কেল ইমেজ। ছবি দেখুন। ![MNIST sample](https://github.com/khanhlvg/DigitClassifier/raw/master/images/mnist.png)
 
 ```python
 # কেরাস থেকে এপিআই দিয়ে ডাউনলোড করে দেখাচ্ছি, টিএফডিএস নয়, ভ্যারিয়েশন
@@ -44,10 +60,10 @@ mnist = keras.datasets.mnist
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 ```
 
-    Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
-    11493376/11490434 [==============================] - 0s 0us/step
-
-
+```text
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11493376/11490434 [==============================] - 0s 0us/step
+```
 
 ```python
 # আগের মতো নর্মালাইজ করে ০ থেকে ১ এর মধ্যে রাখছি
@@ -56,13 +72,13 @@ test_images = test_images / 255.0
 print('Pixels are normalized')
 ```
 
-    Pixels are normalized
-
+```text
+Pixels are normalized
+```
 
 ## টেন্সরফ্লো মডেল তৈরি ডিজিট ক্লাসিফাই করার জন্য
 
 একদম আগের মতো। কোন পার্থক্য় নেই।
-
 
 ```python
 # শুরুতে মডেল আর্কিটেকচার ডিফাইন করছি
@@ -84,60 +100,58 @@ model.compile(optimizer='adam',
 model.fit(train_images, train_labels, epochs=5)
 ```
 
-    Train on 60000 samples
-    Epoch 1/5
-    60000/60000 [==============================] - 11s 177us/sample - loss: 0.2655 - accuracy: 0.9264
-    Epoch 2/5
-    60000/60000 [==============================] - 4s 67us/sample - loss: 0.1035 - accuracy: 0.9708
-    Epoch 3/5
-    60000/60000 [==============================] - 4s 72us/sample - loss: 0.0759 - accuracy: 0.9785
-    Epoch 4/5
-    60000/60000 [==============================] - 4s 68us/sample - loss: 0.0626 - accuracy: 0.9818
-    Epoch 5/5
-    60000/60000 [==============================] - 4s 68us/sample - loss: 0.0540 - accuracy: 0.9839
+```text
+Train on 60000 samples
+Epoch 1/5
+60000/60000 [==============================] - 11s 177us/sample - loss: 0.2655 - accuracy: 0.9264
+Epoch 2/5
+60000/60000 [==============================] - 4s 67us/sample - loss: 0.1035 - accuracy: 0.9708
+Epoch 3/5
+60000/60000 [==============================] - 4s 72us/sample - loss: 0.0759 - accuracy: 0.9785
+Epoch 4/5
+60000/60000 [==============================] - 4s 68us/sample - loss: 0.0626 - accuracy: 0.9818
+Epoch 5/5
+60000/60000 [==============================] - 4s 68us/sample - loss: 0.0540 - accuracy: 0.9839
 
 
 
 
 
-    <tensorflow.python.keras.callbacks.History at 0x7fc3f04e26a0>
-
-
+<tensorflow.python.keras.callbacks.History at 0x7fc3f04e26a0>
+```
 
 মডেলের সামারি
-
 
 ```python
 model.summary()
 ```
 
-    Model: "sequential"
-    _________________________________________________________________
-    Layer (type)                 Output Shape              Param #   
-    =================================================================
-    reshape (Reshape)            (None, 28, 28, 1)         0         
-    _________________________________________________________________
-    conv2d (Conv2D)              (None, 26, 26, 12)        120       
-    _________________________________________________________________
-    max_pooling2d (MaxPooling2D) (None, 13, 13, 12)        0         
-    _________________________________________________________________
-    flatten (Flatten)            (None, 2028)              0         
-    _________________________________________________________________
-    dense (Dense)                (None, 10)                20290     
-    =================================================================
-    Total params: 20,410
-    Trainable params: 20,410
-    Non-trainable params: 0
-    _________________________________________________________________
-
+```text
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+reshape (Reshape)            (None, 28, 28, 1)         0         
+_________________________________________________________________
+conv2d (Conv2D)              (None, 26, 26, 12)        120       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 13, 13, 12)        0         
+_________________________________________________________________
+flatten (Flatten)            (None, 2028)              0         
+_________________________________________________________________
+dense (Dense)                (None, 10)                20290     
+=================================================================
+Total params: 20,410
+Trainable params: 20,410
+Non-trainable params: 0
+_________________________________________________________________
+```
 
 এখানে যে বাড়তি ডাইমেনশন আছে **None** শেপ দিয়ে প্রতিটা লেয়ারে, সেটা আসলে ব্যাচ ডাইমেনশন। যেহেতু ডেটা ব্যাচে প্রসেস হয়, সেকারণে টেন্সরফ্লো নিজে থেকে যোগ করে দেয়।
-
 
 ## মডেলের ইভালুয়েশন
 
 টেস্ট ডেটাসেট দিয়ে কেমন কাজ করে?
-
 
 ```python
 test_loss, test_acc = model.evaluate(test_images, test_labels)
@@ -145,14 +159,14 @@ test_loss, test_acc = model.evaluate(test_images, test_labels)
 print('Test accuracy:', test_acc)
 ```
 
-    10000/10000 [==============================] - 1s 68us/sample - loss: 0.0647 - accuracy: 0.9801
-    Test accuracy: 0.9801
-
+```text
+10000/10000 [==============================] - 1s 68us/sample - loss: 0.0647 - accuracy: 0.9801
+Test accuracy: 0.9801
+```
 
 ## কেরাস মডেল থেকে টেন্সরফ্লো লাইটে কনভার্ট করছি এখানে
 
 ডিজিট ক্লাসিফায়ার মডেলকে টিএফ লাইট ফরম্যাটে আনছি।
-
 
 ```python
 # কনভার্টারের ব্যবহার
@@ -164,15 +178,15 @@ float_model_size = len(tflite_float_model) / 1024
 print('Float model size = %dKBs.' % float_model_size)
 ```
 
-    Float model size = 81KBs.
-
+```text
+Float model size = 81KBs.
+```
 
 ## টেন্সরফ্লো লাইট মডেল ডাউনলোড করছি এখানে
 
 এই মডেলটাকে ডাউনলোড করছি এখানে যাতে এটাকে অ্যান্ড্রয়েড অ্যাপে ঢুকিয়ে কাজ করতে পারি। এটাকে কপি করে রাখতে হবে দরকারী ফোল্ডারে।
 
 mnist.tflite ফাইলটা একবারে ডাউনলোড না হলে শুধুমাত্র এই সেলটাকে আবার চালাতে হবে।
-
 
 ```python
 # ফাইলটাকে সেভ করে রাখি এখানে mnist.tflite হিসেবে
@@ -187,5 +201,7 @@ files.download('mnist.tflite')
 print('`mnist.tflite` has been downloaded')
 ```
 
-    `mnist.tflite` has been downloaded
+```text
+`mnist.tflite` has been downloaded
+```
 
