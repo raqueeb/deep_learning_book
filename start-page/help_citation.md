@@ -12,5 +12,7 @@
 
 ১০. ড্যান বেকারের "ইন্ট্রোডাকশন টু ডিপ লার্নিং ইন পাইথন", লিংক https://www.datacamp.com/courses/deep-learning-in-python
 
+১১. গুগলের কোডল্যাবসের একটা অসাধারণ ল্যাব [https://codelabs.developers.google.com/codelabs/digit-classifier-tflite/index.html](https://codelabs.developers.google.com/codelabs/digit-classifier-tflite/index.html) 
+
 এই বইটা লিখতে সাহায্য করেছেন অনেকেই। তাদের নাম থাকবে এখানে। 
 
