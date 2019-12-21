@@ -113,10 +113,6 @@ Epoch 4/5
 Epoch 5/5
 60000/60000 [==============================] - 4s 68us/sample - loss: 0.0540 - accuracy: 0.9839
 
-
-
-
-
 <tensorflow.python.keras.callbacks.History at 0x7fc3f04e26a0>
 ```
 
