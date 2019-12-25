@@ -4,6 +4,7 @@
 
 ## শুরুর ঘটনা <a id="start-page"></a>
 
+* [শুরুর কথা](start-page/intro.md)
 * [এই বইটা থেকে কি আশা করছি?](start-page/why-another-book.md)
 * [‘ডিপ লার্নিং’ কি হাইপ? কেন এতো দেরি হলো?](start-page/why-late.md)
 * [কৃতজ্ঞতা](start-page/courtesy.md)
