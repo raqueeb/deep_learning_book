@@ -53,7 +53,9 @@ hidden_layer_outputs = np.array([node_0_value, node_1_value])
 output = (hidden_layer_outputs * weights['output']).sum()
 
 # আউটপুট প্রিন্ট করে দেখি
+print(hidden_layer_outputs)
 print(output)
+[5 1]
 9
 ```
 
@@ -75,11 +77,18 @@ print(output)
 
 ![&#x997;&#x9CD;&#x9B0;&#x9C7;&#x9A1;&#x9BF;&#x9AF;&#x9BC;&#x9C7;&#x9A8;&#x9CD;&#x99F; &#x9A1;&#x9BF;&#x9B8;&#x9C7;&#x9A8;&#x9CD;&#x99F; &#x98F;&#x9B0; &#x9A8;&#x9BF;&#x99A;&#x9C7; &#x9A8;&#x9BE;&#x9AE;&#x9BE; ](../.gitbook/assets/grad51.png)
 
-এই জিনিসটা আমাদের ওয়েটের জন্য প্রযোজ্য। এরর বেশি হলে বড় বড় স্টেপে এরর কমিয়ে শেষে সেটা আস্তে আস্তে অল্প অল্প করে ওয়েটের ভ্যালু পাল্টে টার্গেট ভ্যালুর কাছাকাছি পৌঁছানো যায়। এটাকে লার্নিং রেট বলা যায়। কিভাবে কম কম করে নিচে নাম যায়? স্লোপের ক্যালকুলেশন করে। এই জিনিস আমরা ক্যালকুলাস মানে চেইন রুল দিয়ে বের করতে পারি। তবে শুরুতে স্লোপ এর হিসেব বের করি। 
+এই জিনিসটা আমাদের ওয়েটের জন্য প্রযোজ্য। এরর বেশি হলে বড় বড় স্টেপে এরর কমিয়ে শেষে সেটা আস্তে আস্তে অল্প অল্প করে ওয়েটের ভ্যালু পাল্টে টার্গেট ভ্যালুর কাছাকাছি পৌঁছানো যায়। এটাকে লার্নিং রেট বলা যায়। কিভাবে কম কম করে নিচে নাম যায়? স্লোপের ক্যালকুলেশন করে। এই জিনিস আমরা ক্যালকুলাস মানে চেইন রুল দিয়ে বের করতে পারি। তবে শুরুতে স্লোপ এর হিসেব বের করি। নতুন একটা উদাহরণ দিয়ে। 
 
 ```text
+# নতুন ওয়েট এবং ইনপুট ডেটা 
+weights = np.array([1, 2])
+input_data = np.array([3, 4]) 
+
 # প্রেডিকশন ক্যাল্কুলেট করি: preds
 preds = (weights * input_data).sum()
+
+# ধরি আমাদের টার্গেট ৬
+target = 6
 
 # এরর ক্যালকুলেট করি: error
 error = preds - target
@@ -89,7 +98,7 @@ slope = 2 * input_data * error
 
 # স্লোপ প্রিন্ট করি 
 print(slope)
-[14 28 42]
+[30 40]
 ```
 
 #### মডেলের ওয়েট কিভাবে ভালো লেভেলে যাবে?
@@ -98,17 +107,11 @@ print(slope)
 # লার্নিং রেট ঠিক করি: learning_rate
 learning_rate = 0.01
 
-# প্রেডিকশন ক্যালকুলেট করি: preds
-preds = (weights * input_data).sum()
-
-# এরর ক্যালকুলেট করি : error
-error = preds - target
-
-# স্লোপ ক্যালকুলেট করি: slope
-slope = 2 * input_data * error
+# স্লোপ/গ্রেডিয়েন্ট ক্যালকুলেট করি: gradient
+gradient = 2 * input_data * error
 
 # ওয়েট আপডেট করি: weights_updated
-weights_updated = weights - learning_rate * slope
+weights_updated = weights - learning_rate * gradient
 
 # প্রেডিকশন আপডেট নেই : preds_updated
 preds_updated = (weights_updated * input_data).sum()
@@ -121,6 +124,8 @@ print(error)
 
 # নতুন এরর প্রিন্ট করি 
 print(error_updated)
+5
+2.5
 ```
 
 #### কিভাবে ওয়েট পাল্টালে অ্যাক্যুরেসি পাল্টায় 
@@ -187,7 +192,10 @@ print(model_output_0)
 print(model_output_1)
 print(error_0)
 print(error_1)
-
+9
+3
+6
+0
 ```
 
 #### ব্যাকওয়ার্ড প্রোপাগেশন 
