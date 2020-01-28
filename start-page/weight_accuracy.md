@@ -230,7 +230,7 @@ print(error_1)
 
 ![&#x9B0;&#x9C7;&#x9B2;&#x9CD;&#x9AF;&#x9C1; &#x9AB;&#x9BE;&#x982;&#x9B6;&#x9A8;](../.gitbook/assets/relu81.png)
 
-নতুন একটা নেটওয়ার্ক দেখি। এখানে ইনপুট -১, ২ এবং ওয়েট হচ্ছে \(৩, ৩\), \(১, ৫\) এবং \(২, -১\) যা দেয়া হয়েছে ডিকশনারীতে। এরপর রেল্যু  
+নতুন একটা নেটওয়ার্ক দেখি। এখানে ইনপুট -১, ২ এবং ওয়েট হচ্ছে \(৩, ৩\), \(১, ৫\) এবং \(২, -১\) যা দেয়া হয়েছে ডিকশনারীতে। এরপর রেল্যু  ফাংশন।
 
 ```text
 import numpy as np
@@ -252,22 +252,28 @@ def relu(input):
     # Return the value just calculated
     return(output)
 
-# Calculate node 0 value: node_0_output
+# নোড ১ এর ভ্যালু ক্যালকুলেট করি: node_0_output
 node_0_input = (input_data * weights['node_0']).sum()
 node_0_output = relu(node_0_input)
 
-# Calculate node 1 value: node_1_output
+# নোড ২ এর ভ্যালু ক্যালকুলেট করি: node_1_output
 node_1_input = (input_data * weights['node_1']).sum()
 node_1_output = relu(node_1_input)
 
-# Put node values into array: hidden_layer_outputs
+# নতুন ভ্যালুগুলোকে অ্যারেতে বসাই: hidden_layer_outputs
 hidden_layer_outputs = np.array([node_0_output, node_1_output])
 
-# Calculate model output (do not apply relu)
+# মডেলের আউটপুট ক্যালকুলেট করি (রেল্যুকে সরাসরি ব্যবহার না করে)
 model_output = (hidden_layer_outputs * weights['output']).sum()
 
 # Print model output
+print(node_0_output)
+print(node_1_output)
+print(hidden_layer_outputs)
 print(model_output)
-52
+3
+9
+[3 9]
+-3
 ```
 
