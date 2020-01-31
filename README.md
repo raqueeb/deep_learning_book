@@ -12,9 +12,12 @@ description: সাইকিট-লার্ন থেকে টেন্সর-
 
 {% hint style="info" %}
 বইটা ড্রাফট অবস্থায় আছে। টাইমলাইন - ২১শে বইমেলা, ২০২০। প্রতিনিয়তঃ এটার আপডেট আসছে চ্যাপ্টারভিত্তিক। বই সম্পর্কে কোন ভুল বা মতামত থাকলে জানাতে পারেন ফেইসবুক মেসেঞ্জার [http://m.me/raqueeb](http://m.me/raqueeb) এবং ০১৭১৩০৯৫৭৬৭ \(বিকাল ৫- ৭টা\)। 
+{% endhint %}
 
-  
-বাকি সব তথ্যের জন্য লিংক [bit.ly/mlstart](http://bit.ly/mlstart)
+{% hint style="info" %}
+বাকি সব তথ্যের জন্য লিংক: [bit.ly/mlstart](http://bit.ly/mlstart)
+
+এই বইয়ের লিংক: [bit.ly/bn\_dl](http://bit.ly/bn_dl)
 {% endhint %}
 
 
